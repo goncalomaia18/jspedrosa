@@ -1,14 +1,14 @@
 <?php
     $dbhost ='Localhost';
     $dbUsername = 'root';
-    $dbPassword = ''; 
-    $dbName = 'formulario_contacto';
+    $dbPassword = 'Mypassword1234!'; 
+    $dbName = 'contactos';
 
     $conexao = new mysqli($dbhost, $dbUsername, $dbPassword, $dbName);
     
-    if($conexao->connect_errno){
+  /*  if($conexao->connect_errno){
         echo "Erro";
     }else{
-        echo "conexão com sucesso";
-    }
+        echo "Conexão com sucesso";
+    } */
 ?>

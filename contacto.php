@@ -1,3 +1,27 @@
+<?php
+    if(isset($_POST['submit'])){
+     /* print_r($_POST['nome']);
+        print_r('<br>');
+        print_r($_POST['email']);
+        print_r('<br>');
+        print_r($_POST['telefone']);
+        print_r('<br>'); */
+
+        include_once('config.php');
+
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+
+        $result = mysqli_query($conexao, "INSERT INTO contactos(nome, email, telefone) VALUES ('$nome', '$email', '$telefone')");
+    }
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <meta charset="utf-8">
 <html>
@@ -30,7 +54,7 @@
         </div>
 
         <div class="box">
-            <form action="">
+            <form action="contacto.php" method="POST">
                 <fieldset>
                     <legend><b>Fórmulário de Clientes</b></legend>
                     <br>
